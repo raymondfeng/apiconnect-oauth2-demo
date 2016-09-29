@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <title>oauth-playground</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="js/oauth2.js"></script>
+    <script>
+        $(function() {
+            if (hasQueryStrParams())
+                return displayMessage(window.location);
+
+            if (!hasFragment())
+                return implicit(CLIENT_ID);
+
+            var OauthToken = getAccessToken();
+
+            getReviews(OauthToken, null, null, function(response) {
+                var table = '<table>';
+                table += '<tr>';
+                Object.keys(response[0]).forEach(function(c) {
+                    table += '<th>' + c + '</th>';
+                });
+                table += '</tr>';
+                response.forEach(function(r) {
+                    table += '<tr>';
+                    for (var i in r) {
+                        table += '<td>' + r[i] + '</td>'
+                    }
+                    table += '</tr>';
+                });
+                table += '</table>';
+                displayMessage(table);
+            });
+
+        });
+    </script>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+</head>
+<body>
+<h1>Social Reviews</h1>
+
+<hr>
+
+<p>Records: <strong id="msg"></strong></p>
+
+<p><a href="/">Home</a></p>
+</body>
+</html>

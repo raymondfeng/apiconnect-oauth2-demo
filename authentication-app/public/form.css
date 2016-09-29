@@ -1,0 +1,49 @@
+
+
+form {
+    border-radius: 5px;
+    font-family: 'Open Sans', arial;
+    background-color: #f7f7f7;
+    padding: 10px;
+    text-align: center;
+    margin-top:40%;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+h1 {
+  font-size:18px;
+}
+
+h2 {
+  font-size:11px;
+}
+
+input {
+    width:80%;
+    padding: 7px 10px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 2px;
+}
+
+button[type=submit] {
+    width:85%;
+    background-color: #4d90fe;
+    color: white;
+    padding: 7px 10px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+button.button-left {
+  width:40%; important!
+  float: left;
+}
+
+button.button-right{
+  width:40%; important!
+  float: right;
+}

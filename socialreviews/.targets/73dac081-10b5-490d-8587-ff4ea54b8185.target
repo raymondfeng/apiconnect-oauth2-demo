@@ -1,0 +1,116 @@
+type: bluemix
+server:
+  displayName: US South
+  name: us-south
+  host: us.apiconnect.ibmcloud.com
+org:
+  url: 'https://us.apiconnect.ibmcloud.com/v1/orgs/5759951c0cf25291cee3f089'
+  id: 5759951c0cf25291cee3f089
+  name: rfengusibmcom-dev
+  status: active
+  orgType: apiProvider
+  displayName: rfeng@us.ibm.com (dev)
+  externalOrgId: 1c3979b8-898b-4e3e-a398-8aea27902b98
+  externalInviteOverride: 'https://new-console.ng.bluemix.net/apis/catalog/invitation'
+  externalSpaceId: 1c3979b8-898b-4e3e-a398-8aea27902b98
+  externalNativeOrgId: ee1e18e6-a028-4203-8f17-a58566579701
+  advPortalOverride: true
+  extUaaAuthenticated: false
+  requiresSSLClientCertCheck: false
+  dormant: false
+catalog:
+  id: 5759951c0cf25291cee3f090
+  shortName: sb
+  name: Sandbox
+  sandbox: true
+app:
+  metadata:
+    guid: 5616c013-9da9-4307-9fda-519150371089
+  entity:
+    guid: 5616c013-9da9-4307-9fda-519150371089
+    name: socialreviews
+    routes:
+      - guid: 88d5bdb8-d90e-4c8d-80f4-e298565a5044
+        host: apiconnect-5616c013-9da9-4307-9fda-519150371089
+        port: null
+        path: ''
+        domain:
+          guid: 2be94361-ff83-4103-adac-05cda186a71d
+          name: rfengusibmcom-dev.apic.mybluemix.net
+      - guid: 6f5f77e4-36d9-4077-878e-157d11d022de
+        host: rfeng-socialreviews
+        port: null
+        path: ''
+        domain:
+          guid: f4b90d7e-2cd3-4d30-b200-f28bbaf6be20
+          name: mybluemix.net
+    running_instances: 0
+    services: []
+    available_domains:
+      - guid: 2be94361-ff83-4103-adac-05cda186a71d
+        name: rfengusibmcom-dev.apic.mybluemix.net
+        owning_organization_guid: ee1e18e6-a028-4203-8f17-a58566579701
+      - guid: f4b90d7e-2cd3-4d30-b200-f28bbaf6be20
+        name: mybluemix.net
+        router_group_guid: null
+        router_group_type: null
+    production: false
+    space_guid: 1c3979b8-898b-4e3e-a398-8aea27902b98
+    stack_guid: ac91d31a-86a3-453b-babf-8d49c9d763fc
+    buildpack: null
+    detected_buildpack: 'SDK for Node.js(TM) (ibm-node.js-4.5.0, buildpack-v3.7-20160826-1101)'
+    environment_json: {}
+    memory: 256
+    instances: 1
+    disk_quota: 1024
+    state: STOPPED
+    version: 145e18a5-5a57-4475-bf9c-7c915b2f850d
+    command: null
+    console: true
+    debug: null
+    staging_task_id: a5d82190f0d34b40ab666b2d6e88a6e4
+    package_state: STAGED
+    health_check_type: port
+    health_check_timeout: null
+    staging_failed_reason: null
+    staging_failed_description: null
+    diego: false
+    docker_image: null
+    package_updated_at: '2016-09-29T18:43:18Z'
+    detected_start_command: ./vendor/initial_startup.rb
+    enable_ssh: true
+    docker_credentials_json:
+      redacted_message: '[PRIVATE DATA HIDDEN]'
+    ports: null
+id: 73dac081-10b5-490d-8587-ff4ea54b8185
+target: 1.0.0
+versionOptions:
+  inplaceUpdate: true
+publishApp: true
+publishProducts: true
+workspaceDir:
+  name: socialreviews
+  path: /Users/rfeng/Projects/ibm/redp5350-apiconnect-sample/socialreviews
+  id: 8
+  displayName: socialreviews
+  type: project
+  projectType: loopback
+products:
+  - info:
+      name: socialreviews
+      title: socialreviews
+      version: 1.0.0
+      description: |-
+        socialreviews application from
+        CompanyC
+      contact:
+        name: Admin
+        email: admin@companyc.com
+        url: 'http://www.companyc.com'
+      license:
+        name: companyC license
+        url: 'http://www.companyc.com'
+      termsOfService: CompanyC terms of service
+    updatedAt: '2016-09-21T23:48:59.000Z'
+    file: >-
+      /Users/rfeng/Projects/ibm/redp5350-apiconnect-sample/socialreviews/definitions/socialreviews-product.yaml
