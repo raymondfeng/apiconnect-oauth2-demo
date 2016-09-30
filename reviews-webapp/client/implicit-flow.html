@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>oauth-playground</title>
+    <title>Social Reviews</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script src="js/oauth2.js"></script>
     <script>
@@ -14,7 +14,7 @@
 
             var OauthToken = getAccessToken();
 
-            getReviews(OauthToken, null, null, function(response) {
+            getReviews(OauthToken).done(function(response) {
                 var table = '<table>';
                 table += '<tr>';
                 Object.keys(response[0]).forEach(function(c) {
@@ -30,6 +30,8 @@
                 });
                 table += '</table>';
                 displayMessage(table);
+            }).fail(function(res) {
+               displayMessage(res.responseText);
             });
 
         });

@@ -144,7 +144,7 @@ function getAccessToken() {
   return null;
 }
 
-function introspect(token, clientId, clientSecret, cb) {
+function introspect(token, clientId, clientSecret) {
   clientId = clientId || CLIENT_ID;
   clientSecret = clientSecret || CLIENT_SECRET;
 
@@ -166,11 +166,11 @@ function introspect(token, clientId, clientSecret, cb) {
     }
   };
 
-  $.ajax(settings).done(cb);
+  return $.ajax(settings);
 }
 
 
-function getReviews(token, clientId, clientSecret, cb) {
+function getReviews(token, clientId, clientSecret) {
   clientId = clientId || CLIENT_ID;
   clientSecret = clientSecret || CLIENT_SECRET;
   var settings = {
@@ -186,5 +186,5 @@ function getReviews(token, clientId, clientSecret, cb) {
       "cache-control": "no-cache"
     }
   };
-  $.ajax(settings).done(cb);
+  return $.ajax(settings);
 }
