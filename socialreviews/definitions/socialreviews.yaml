@@ -166,6 +166,14 @@ x-ibm-configuration:
             }
 
 
+            var clientId = apim.getvariable('client.app.id');
+
+            apim.setvariable('message.headers.x-oauth2-client-id', clientId);
+
+            var orgId = apim.getvariable('client.org.id');
+
+            apim.setvariable('message.headers.x-oauth2-client-org-id', orgId);
+
             var userId = apim.getvariable('oauth.resource-owner');
 
             apim.setvariable('message.headers.x-oauth2-resource-owner', userId);
